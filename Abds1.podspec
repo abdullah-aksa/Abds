@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Abds1'
-  s.version          = '0.1.1'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of Abds1.'
 #  s.swift_version    = ''
   s.platform = :ios, "10.0"
