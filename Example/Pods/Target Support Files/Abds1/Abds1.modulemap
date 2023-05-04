@@ -1,0 +1,6 @@
+framework module Abds1 {
+  umbrella header "Abds1-umbrella.h"
+
+  export *
+  module * { export * }
+}
