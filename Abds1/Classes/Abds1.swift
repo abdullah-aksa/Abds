@@ -13,7 +13,9 @@ public final class Abds1 {
     let name = "Abds1"
     
     public init(){
-        runTestAPI()
+        runTestAPI() { response in
+            debugPrint("Abds1.init: \(response)")
+        }
     }
     
     /// Adds two integers
@@ -35,9 +37,9 @@ public final class Abds1 {
         return a - b
     }
     
-    private func runTestAPI() {
+    public func runTestAPI(completionHandler: @escaping(AFDataResponse<Data?>)->()) {
         AF.request("https://api.publicapis.org/entries").response { response in
-            debugPrint("\(response)")
+            completionHandler(response)
         }
     }
 }

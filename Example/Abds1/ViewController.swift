@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(">>> \(abds.add(23, 27))")
+        abds.runTestAPI { response in
+            print(">>> Abds1.viewDidLoad() status code: \(response.response?.statusCode)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
